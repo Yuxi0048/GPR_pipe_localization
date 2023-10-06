@@ -1,6 +1,6 @@
 # GPR_pipe_localization
 
-You can run the initial cells in the demo.ipynb file to evaluate the methods by applying noise at different levels. Here's what needs to be done:
+You can run the initial cells in the demo.ipynb file to evaluate the methods by applying noise at different levels. Here's the to-do-list:
 
 1. Add more annotations in the code.
 2. Clean up the demo file.
