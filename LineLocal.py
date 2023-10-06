@@ -52,7 +52,11 @@ class VP():
         return res.x
 
 class PDiff():
-
+"""
+Same as the PDiff_toda, the difference between these two are the inputs
+ PDiff will calculate all the point-pipe distance differences between any 2 points in the set
+ PDiff_toda will take two individual set of points  and calculate their corresponding differences
+"""
     def __init__(self, pt, d):
         """
         pt: location of the measurement points
@@ -168,10 +172,12 @@ class PDiff_tdoa():
         res = least_squares(self.residuals, x0, jac = self.d_lsq, method = "lm")
         return res.x
 
-
-
 class combPV_admm():
-    
+"""
+Same as the combPV_admm_tdoa, the difference between these two are the inputs
+combPV_admm will calculate all the point-pipe distance differences between any 2 points in the set
+combPV_tdoa_admm will take two individual set of points and calculate their corresponding differences
+"""    
     def __init__(self, pt, d, ver, ls):
         """
         pt: location of the measurement points
