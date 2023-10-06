@@ -1,6 +1,7 @@
 import numpy as np
 
 def hat(v):
+    
     """
     vecotrized version of the hat function, creating for a vector its skew symmetric matrix.
 
@@ -10,6 +11,7 @@ def hat(v):
     Returns:
         (np.array<float>(..., 3, 3)): The output skew symmetric matrix.
 
+    source: https://stackoverflow.com/questions/33813743/non-linear-optimization-for-rotation
     """
     E1 = np.array([[0., 0., 0.], [0., 0., -1.], [0., 1., 0.]])
     E2 = np.array([[0., 0., 1.], [0., 0., 0.], [-1., 0., 0.]])
@@ -36,6 +38,7 @@ def exp(v, der=False):
                                             to v_i. Note that this is not a Jacobian of
                                             any form but a vectorized version of derivatives.]
 
+    source: https://stackoverflow.com/questions/33813743/non-linear-optimization-for-rotation
     """
     n = np.linalg.norm(v, axis=-2, keepdims=True)
     H = hat(v)
